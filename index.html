@@ -1,16 +1,305 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/src/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Evento navideño</title>
+    <script
+      src="https://kit.fontawesome.com/ed14e3c3ce.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <h1 class="text-red-600">
-      Hello world!
-    </h1>
+  <body class="font-mon">
+    <header
+      class="relative w-full overflow-y-hidden color-white bg-header-image bg-no-repeat bg-cover min-h-[auto] md:min-h-[100vh]"
+    >
+      <div
+        class="z-10 relative flex flex-col gap-5 h-[100vh] justify-center items-center"
+      >
+        <img src="src/assets/images/logo_show.webp" alt="" class="w-52" />
+
+        <div class="text-center">
+          <h1 class="text-white text-[3rem] font-chrismas font-bold">
+            No puedes perderte de este show de cocina Navideno
+          </h1>
+          <h2 class="text-white text-[1.5rem] font-bold">
+            Donde habrá comida, regalos y muchas sorpresas
+          </h2>
+          <a
+            href="#form"
+            class="block w-[80%] lg:w-[30%] mx-auto bg-red-500 text-white px-5 py-2 rounded-md mt-5 font-bold"
+          >
+            Quiero apartar mi cupo!
+          </a>
+        </div>
+        <div>
+          <img
+            class="w-[700px]"
+            src="src/assets/images/ollas_juntas_header.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+
+    <section class="p-4 lg:p-8 text-white bg-[#00873E]">
+      <div class="container mx-auto p-4 my-6 space-y-2 text-center">
+        <h2 class="text-5xl font-bold font-chrismas">
+          El evento del año para los amantes de la comida saludable
+        </h2>
+        <p class="font-mon">
+          Diversión para todos hasta los pequeños de la casa
+        </p>
+      </div>
+
+      <div class="container mx-auto space-y-12">
+        <div
+          class="flex flex-col overflow-hidden bg-red-500 rounded-md shadow-sm lg:flex-row"
+        >
+          <img
+            src="src/assets/images/regalos_evento.webp"
+            alt=""
+            class="h-80 dark:bg-gray-500 aspect-video lg:flex-1"
+          />
+          <div class="flex flex-col justify-center flex-1 p-6">
+            <span class="text-xs uppercase">Solo por asistir</span>
+            <h3 class="text-3xl font-bold">
+              Te llevas uno de estos hermosos regalos
+            </h3>
+            <ul class="my-4">
+              <li>
+                <span class="mr-2"
+                  ><i
+                    class="fa-regular fa-star"
+                    style="color: #ffffff"
+                  ></i></span
+                >Kit Barista
+              </li>
+              <li>
+                <span class="mr-2"
+                  ><i
+                    class="fa-regular fa-star"
+                    style="color: #ffffff"
+                  ></i></span
+                >Tazon con base de goma
+              </li>
+              <li>
+                <span class="mr-2"
+                  ><i
+                    class="fa-regular fa-star"
+                    style="color: #ffffff"
+                  ></i></span
+                >Tabla de bambu
+              </li>
+            </ul>
+            <a
+              href="#form"
+              class="block self-start bg-[#00873E] p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
+            >
+              Reservar Cupo
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col overflow-hidden bg-red-500 rounded-md shadow-sm lg:flex-row"
+        >
+          <div class="flex flex-col justify-center flex-1 p-6">
+            <span class="text-xs uppercase"
+              >Diversión para toda la familia</span
+            >
+            <h3 class="text-3xl font-bold">
+              También habrá actividades para los consentidos de la casa
+            </h3>
+
+            <a
+              href="#form"
+              class="block self-start bg-[#00873E] mt-3 p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
+            >
+              Reservar Cupo
+            </a>
+          </div>
+          <img
+            src="src/assets/images/pinta_caritas.webp"
+            alt=""
+            class="h-80 dark:bg-gray-500 aspect-video lg:flex-1"
+          />
+        </div>
+
+        <div
+          class="flex flex-col overflow-hidden bg-red-500 rounded-md shadow-sm lg:flex-row"
+        >
+          <img
+            src="src/assets/images/imagen premios.png"
+            alt=""
+            class="h-80 dark:bg-gray-500 aspect-video lg:flex-1"
+          />
+          <div class="flex flex-col justify-center flex-1 p-6">
+            <span class="text-xs uppercase"
+              >Puedes ganar un premio super especial</span
+            >
+            <h3 class="text-3xl font-bold">
+              Según el horario que asistas puedes participar por un premio
+              especial
+            </h3>
+            <ul class="my-4">
+              <li>
+                <span class="mr-2"
+                  ><i
+                    class="fa-regular fa-star"
+                    style="color: #ffffff"
+                  ></i></span
+                >11:00 AM: Olla de presión 6 Qt
+              </li>
+              <li>
+                <span class="mr-2"
+                  ><i
+                    class="fa-regular fa-star"
+                    style="color: #ffffff"
+                  ></i></span
+                >2:30 PM: Paellera 14" Anfitriona
+              </li>
+              <li>
+                <span class="mr-2"
+                  ><i
+                    class="fa-regular fa-star"
+                    style="color: #ffffff"
+                  ></i></span
+                >6:00 PM: Olla 12 Qt Innove
+              </li>
+            </ul>
+            <a
+              href="#form"
+              class="block self-start bg-[#00873E] p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
+            >
+              Reservar Cupo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="form"
+      class="relative flex flex-wrap bg-red-500 text-white lg:h-screen lg:items-center"
+    >
+      <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+        <div class="mx-auto max-w-lg text-center">
+          <h1 class="text-2xl font-bold font-chrismas sm:text-3xl">
+            Reserva tu cupo hoy!
+          </h1>
+
+          <p class="mt-4">
+            No dejes que otros te lo cuente y vive de una experiencia en familia
+            unica junto a nosotros!
+          </p>
+        </div>
+
+        <form action="#" class="mx-auto mb-0 mt-8 max-w-md space-y-4 text-gray-400">
+          <div>
+            <label for="name" class="sr-only">Nombre</label>
+
+            <div class="relative">
+              <input
+                type="name"
+                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Nombre completo"
+              />
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-user"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="question" class="sr-only">Quien te acompañara al evento?</label>
+
+            <div class="relative">
+              <select class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" name="cars" id="cars">
+                <option value="" disabled selected>¿Quién te acompañará al evento?</option>
+                <option value="solo">Solo(a)</option>
+                <option value="esposo">Esposo(a)</option>
+                <option value="otros">Otros</option>
+              </select>
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-users"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="sr-only">Correo</label>
+
+            <div class="relative">
+              <input
+                type="email"
+                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Email"
+              />
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="phone" class="sr-only">Telefono</label>
+
+            <div class="relative">
+              <input
+                type="tel"
+                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Telefono"
+              />
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-phone"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-end">
+            <button
+              type="submit"
+              class="inline-block rounded-lg bg-[#00873E] px-5 py-3 text-sm font-medium text-white"
+            >
+              Reservar Cupo
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+        <img
+          alt=""
+          src="src/assets/images/chef_yisus.webp"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
+    </section>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

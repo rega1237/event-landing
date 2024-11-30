@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'header-image': "url('/src/assets/images/fondo_header.jpg')",
+      },
+      fontFamily: {
+        'chrismas': ['Mountains of Christmas', 'serif'],
+        'mon': ['Montserrat', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
