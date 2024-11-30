@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/images/icon_evento.png" />
     <link rel="stylesheet" href="/src/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,13 @@
     ></script>
   </head>
   <body class="font-mon">
+
+    <div class="illustration">
+      <div class="i-large"></div>
+      <div class="i-medium"></div>
+      <div class="i-small"></div>
+    </div>
+
     <header
       class="relative w-full overflow-y-hidden color-white bg-header-image bg-no-repeat bg-cover min-h-[auto] md:min-h-[100vh]"
     >
@@ -106,7 +113,7 @@
             </ul>
             <a
               href="#form"
-              class="block self-start bg-[#00873E] p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
+              class="block z-10 self-start bg-[#00873E] p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
             >
               Reservar Cupo
             </a>
@@ -126,7 +133,7 @@
 
             <a
               href="#form"
-              class="block self-start bg-[#00873E] mt-3 p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
+              class="block z-10 self-start bg-[#00873E] mt-3 p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
             >
               Reservar Cupo
             </a>
@@ -182,7 +189,7 @@
             </ul>
             <a
               href="#form"
-              class="block self-start bg-[#00873E] p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
+              class="block z-10 self-start bg-[#00873E] p-2 rounded hover:bg-white hover:text-red-500 hover:font-bold"
             >
               Reservar Cupo
             </a>
@@ -211,10 +218,10 @@
           <div>
             <label for="name" class="sr-only">Nombre</label>
 
-            <div class="relative">
+            <div class="relative z-10">
               <input
                 type="name"
-                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Nombre completo"
               />
 
@@ -229,8 +236,8 @@
           <div>
             <label for="question" class="sr-only">Quien te acompañara al evento?</label>
 
-            <div class="relative">
-              <select class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" name="cars" id="cars">
+            <div class="relative z-10">
+              <select class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" name="cars" id="cars">
                 <option value="" disabled selected>¿Quién te acompañará al evento?</option>
                 <option value="solo">Solo(a)</option>
                 <option value="esposo">Esposo(a)</option>
@@ -248,10 +255,10 @@
           <div>
             <label for="email" class="sr-only">Correo</label>
 
-            <div class="relative">
+            <div class="relative z-10">
               <input
                 type="email"
-                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Email"
               />
 
@@ -266,10 +273,10 @@
           <div>
             <label for="phone" class="sr-only">Telefono</label>
 
-            <div class="relative">
+            <div class="relative z-10">
               <input
                 type="tel"
-                class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Telefono"
               />
 
@@ -281,10 +288,10 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-end">
+          <div class="flex items-center justify-end z-10">
             <button
               type="submit"
-              class="inline-block rounded-lg bg-[#00873E] px-5 py-3 text-sm font-medium text-white"
+              class="inline-block z-10 rounded-lg bg-[#00873E] px-5 py-3 text-sm font-medium text-white"
             >
               Reservar Cupo
             </button>
