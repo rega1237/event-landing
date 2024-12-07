@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="src/assets/images/icon_evento.png" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="src/assets/images/icon_evento.png"
+    />
     <link rel="stylesheet" href="/src/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +26,6 @@
     ></script>
   </head>
   <body class="font-mon">
-
     <div class="illustration">
       <div class="i-large"></div>
       <div class="i-medium"></div>
@@ -48,7 +51,7 @@
             href="#form"
             class="block w-[80%] lg:w-[40%] mx-auto bg-red-500 text-xl text-white px-5 py-2 rounded-md mt-5 font-bold"
           >
-          !Quiero apartar mi cupo!
+            !Quiero apartar mi cupo!
           </a>
         </div>
         <div>
@@ -66,9 +69,7 @@
         <h2 class="text-5xl font-bold font-chrismas">
           El evento del año para los amantes de la comida saludable
         </h2>
-        <p class="font-mon">
-          Diversión para toda la familia
-        </p>
+        <p class="font-mon">Diversión para toda la familia</p>
       </div>
 
       <div class="container mx-auto space-y-12">
@@ -115,7 +116,7 @@
               href="#form"
               class="block z-10 self-start bg-[#00873E] p-4 text-xl font-bold rounded hover:bg-white hover:text-red-500 hover:font-bold"
             >
-            !Quiero mi regalo!
+              !Quiero mi regalo!
             </a>
           </div>
         </div>
@@ -135,7 +136,7 @@
               href="#form"
               class="block z-10 self-start bg-[#00873E] mt-3 p-4 text-xl font-bold rounded hover:bg-white hover:text-red-500 hover:font-bold"
             >
-            !Reservar mi cupo!
+              !Reservar mi cupo!
             </a>
           </div>
           <img
@@ -190,7 +191,7 @@
               href="#form"
               class="block z-10 self-start bg-[#00873E] p-4 text-xl font-bold rounded hover:bg-white hover:text-red-500 hover:font-bold"
             >
-            !Quiero mi pase VIP!
+              !Quiero mi pase VIP!
             </a>
           </div>
         </div>
@@ -212,7 +213,12 @@
           </p>
         </div>
 
-        <form id="form" method="post" action="https://script.google.com/macros/s/AKfycbxEkYvcZVEBrjpExGIpY4GTPLF-WE-xuEfU0Cyzik8udGgiunoVTnZPN9Oocjc5s-s/exec" class="mx-auto mb-0 mt-8 max-w-md space-y-4 text-gray-400">
+        <form
+          id="form"
+          method="post"
+          action="https://script.google.com/macros/s/AKfycbxEkYvcZVEBrjpExGIpY4GTPLF-WE-xuEfU0Cyzik8udGgiunoVTnZPN9Oocjc5s-s/exec"
+          class="mx-auto mb-0 mt-8 max-w-md space-y-4 text-gray-400"
+        >
           <div>
             <label for="name" class="sr-only">Nombre</label>
 
@@ -235,11 +241,20 @@
           </div>
 
           <div>
-            <label for="question" class="sr-only">Quien te acompañara al evento?</label>
+            <label for="question" class="sr-only"
+              >Quien te acompañara al evento?</label
+            >
 
             <div class="relative z-10">
-              <select id="partner" name="acompanante" class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" required>
-                <option value="" disabled selected>¿Quién te acompañará al evento?</option>
+              <select
+                id="partner"
+                name="acompanante"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                required
+              >
+                <option value="" disabled selected>
+                  ¿Quién te acompañará al evento?
+                </option>
                 <option value="soltero(a)">Sotero(a)</option>
                 <option value="esposo(a)">Esposo(a)</option>
               </select>
@@ -314,5 +329,66 @@
       </div>
     </section>
     <script type="module" src="/src/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "piYg8yhy8pnjCSIu3",
+        });
+      })();
+    </script>
+    <script>
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        console.log(name.value, email.value);
+
+        await emailjs
+          .send("service_x474ama", "template_x3004re", {
+            name: name.value,
+            email: email.value,
+          })
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+
+        // Perform an AJAX request to submit the form
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var response = xhr.responseText;
+              console.log(response);
+              form.reset(); // Clear the form fields
+              if (window.location.href.includes("#form")) {
+                window.location.href = `${window.location.href.replace(
+                  "#form",
+                  "reclamar_entrada"
+                )}`; // Redirect to a new page
+              } else {
+                window.location.href = `${window.location.href}/reclamar_entrada`; // Redirect to a new page
+              }
+            } else {
+              // Error response
+              console.error("Error:", xhr.status, xhr.statusText);
+            }
+          }
+        };
+        xhr.send(new FormData(form));
+      });
+    </script>
   </body>
 </html>

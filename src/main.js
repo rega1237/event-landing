@@ -1,3 +1,6 @@
+/*const name = document.getElementById("name");
+const email = document.getElementById("email");
+
 document.getElementById("form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -7,7 +10,6 @@ document.getElementById("form").addEventListener("submit", function(event) {
     xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
-          // Successful response
           var response = xhr.responseText;
           console.log(response);
           document.getElementById("form").reset(); //Clear the form fields
@@ -23,6 +25,6 @@ document.getElementById("form").addEventListener("submit", function(event) {
       }
     };
     xhr.send(new FormData(this));
-  });
+  });*/
 
   
