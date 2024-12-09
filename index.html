@@ -208,15 +208,15 @@
           </h1>
 
           <p class="mt-4">
-            No dejes que otros te lo cuente y vive de una experiencia unica en familia
-            junto a nosotros, en Houston Tx, 77092
+            No dejes que otros te lo cuente y vive de una experiencia unica en
+            familia junto a nosotros, en Houston Tx, 77092
           </p>
         </div>
 
         <form
           id="form"
           method="post"
-          action="https://script.google.com/macros/s/AKfycbxEkYvcZVEBrjpExGIpY4GTPLF-WE-xuEfU0Cyzik8udGgiunoVTnZPN9Oocjc5s-s/exec"
+          action="https://script.google.com/macros/s/AKfycby9IfryrJb5e1dFWTDFvy6BmSwZLLGE1DOK6ne8iE2FI9U2AOm9F1p3TqUpGZCm4RqCVw/exec"
           class="mx-auto mb-0 mt-8 max-w-md space-y-4 text-gray-400"
         >
           <div>
@@ -242,21 +242,50 @@
 
           <div>
             <label for="question" class="sr-only"
-              >Quien te acompañara al evento?</label
+              >¿Conoces la marca de royal prestige?</label
             >
 
             <div class="relative z-10">
               <select
-                id="partner"
-                name="acompanante"
+                id="marca"
+                name="marca"
                 class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 required
               >
                 <option value="" disabled selected>
-                  ¿Eres cliente de Royal Prestige?
+                  ¿Conoces la marca de royal prestige?
                 </option>
-                <option value="soltero(a)">Si</option>
-                <option value="esposo(a)">No</option>
+                <option value="cliente">Si, soy cliente</option>
+                <option value="No es cliente">No, no soy cliente</option>
+                <option value="No conoce la marca">No conozco la marca</option>
+              </select>
+
+              <span
+                class="absolute inset-y-0 end-0 grid place-content-center px-4 text-gray-400"
+              >
+                <i class="fa-solid fa-users"></i>
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label for="question" class="sr-only"
+              >Elige tu regalo</label
+            >
+
+            <div class="relative z-10">
+              <select
+                id="regalo"
+                name="regalo"
+                class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                required
+              >
+                <option value="" disabled selected>
+                  Elige tu regalo
+                </option>
+                <option value="Kit barista">Kit Barista</option>
+                <option value="Tabla">Tabla de bambú</option>
+                <option value="utensilios">Utensilios de lujo</option>
               </select>
 
               <span
