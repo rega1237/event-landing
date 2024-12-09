@@ -38,14 +38,17 @@
       <div
         class="z-10 relative flex flex-col gap-5 h-[100vh] justify-center items-center"
       >
-        <img src="src/assets/images/logo_navidad.png" alt="" class="w-52" />
+        <div class="flex">
+          <img src="src/assets/images/logo_navidad.png" alt="" class="w-52" />
+        </div>
 
         <div class="text-center">
           <h1 class="text-white text-[3rem] font-chrismas font-bold">
-            No puedes perderte de este evento de cocina Navideño
+            Evento de Navidad Cocina con lo mejor de Royal Prestige
           </h1>
-          <h2 class="text-white text-[1.5rem] font-bold">
-            Donde habrá comida, regalos y muchas sorpresas
+          <h2 class="text-white text-[1rem] font-bold">
+            Novedades para cocinar saludable y con estilo utilizando lo mejor de
+            los utensilios de Royal Prestige
           </h2>
           <a
             href="#form"
@@ -64,7 +67,7 @@
       </div>
     </header>
 
-    <section class="p-4 lg:p-8 text-white bg-[#00873E]">
+    <section class="p-4 lg:p-8 text-white bg-[#00873E] hidden">
       <div class="container mx-auto p-4 my-6 space-y-2 text-center">
         <h2 class="text-5xl font-bold font-chrismas">
           El evento del año para los amantes de la comida saludable
@@ -269,9 +272,7 @@
           </div>
 
           <div>
-            <label for="question" class="sr-only"
-              >Elige tu regalo</label
-            >
+            <label for="question" class="sr-only">Elige tu regalo</label>
 
             <div class="relative z-10">
               <select
@@ -280,9 +281,7 @@
                 class="w-full z-10 rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 required
               >
-                <option value="" disabled selected>
-                  Elige tu regalo
-                </option>
+                <option value="" disabled selected>Elige tu regalo</option>
                 <option value="Kit barista">Kit Barista</option>
                 <option value="Tabla">Tabla de bambú</option>
                 <option value="utensilios">Utensilios de lujo</option>
@@ -357,6 +356,7 @@
         />
       </div>
     </section>
+
     <script type="module" src="/src/main.js"></script>
     <script
       type="text/javascript"
